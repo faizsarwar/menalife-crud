@@ -116,6 +116,7 @@ USE_I18N = True
 
 USE_TZ = True
 
+import os
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
@@ -124,5 +125,8 @@ STATIC_URL = 'static/'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
+
+MEDIA_URL = '/media/'  # URL prefix for serving media files
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')  # Absolute filesystem path to the directory that will hold your uploaded media
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'

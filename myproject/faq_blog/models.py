@@ -7,6 +7,7 @@ class FAQ(models.Model):
 class Blog(models.Model):
     title = models.CharField(max_length=255)
     content = models.TextField()
+    image = models.ImageField(upload_to='blog_images/')  # Specify the upload path
 
 class Review(models.Model):
     content = models.TextField()
