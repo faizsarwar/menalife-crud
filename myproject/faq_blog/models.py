@@ -10,9 +10,10 @@ class Blog(models.Model):
     image = models.ImageField(upload_to='blog_images/')  # Specify the upload path
 
 class Review(models.Model):
+    name = models.CharField(max_length=255)
     content = models.TextField()
     created_at = models.DateTimeField(auto_now_add=True)
-    blog = models.ForeignKey(Blog, related_name='reviews', on_delete=models.CASCADE)
+
 
 class ContactUs(models.Model):
     name = models.CharField(max_length=255)
