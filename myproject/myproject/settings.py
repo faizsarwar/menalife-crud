@@ -130,3 +130,6 @@ MEDIA_URL = '/media/'  # URL prefix for serving media files
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')  # Absolute filesystem path to the directory that will hold your uploaded media
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# Specify the default image file storage
+DEFAULT_FILE_STORAGE = 'django.core.files.storage.FileSystemStorage'
